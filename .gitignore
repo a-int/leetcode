@@ -1,4 +1,4 @@
 .vscode
-exc
+build
 *.dSYM
 makefile
