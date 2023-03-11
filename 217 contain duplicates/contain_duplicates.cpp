@@ -22,10 +22,11 @@ int main(){
 }
 
 bool isContain(std::vector<int>& vals){
-    std::set<int> set;
-    for(auto& i: vals){
-        if(set.count(i) == 1) return true;
-        else set.insert(i);
-    }
+ 	unordered_set<int> set{}; // #value #count
+    for(auto const &item: nums) {
+    	if(set.count(item)>0)
+        	return true;
+        set.insert(item);
+	}
     return false;
 }
